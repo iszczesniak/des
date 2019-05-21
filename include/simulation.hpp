@@ -21,13 +21,13 @@ protected:
   // The model we're working on.
   static M m_mdl;
 
-  // The random number generator.
-  static R m_rng;
+  // The random number engine.
+  static R m_rne;
 
 public:
   typedef T time_type;
   typedef M model_type;
-  typedef R rng_type;
+  typedef R rne_type;
 
   // Get the model.
   static M &
@@ -36,11 +36,11 @@ public:
     return m_mdl;
   }
 
-  // Get the random number generator.
+  // Get the random number engine.
   static R &
-  rng()
+  rne()
   {
-    return m_rng;
+    return m_rne;
   }
 
   // Run the simulation with the given simulation time limit.
@@ -85,7 +85,7 @@ template<typename T, typename M, typename R>
 M simulation<T, M, R>::m_mdl;
 
 template<typename T, typename M, typename R>
-R simulation<T, M, R>::m_rng;
+R simulation<T, M, R>::m_rne;
 
 template<typename T, typename M, typename R>
 T simulation<T, M, R>::m_t;
