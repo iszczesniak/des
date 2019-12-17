@@ -52,6 +52,7 @@ public:
       {
         const event<self> &e = m_q.top();
 
+        // Save it as the time of the simulation.
         m_t = e.get_time();
 
         if (m_t > limit)
